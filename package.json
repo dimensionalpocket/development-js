@@ -37,7 +37,7 @@
     "standardx": "7.0.0"
   },
   "devDependencies": {
-    "release-it": "14.10.0"
+    "release-it": "14.10.1"
   },
   "babel": {
     "extends": "./config/babel"
