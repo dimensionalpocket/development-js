@@ -67,7 +67,7 @@ To make `release-it` use the configuration from this library, change the `npm ru
 }
 ```
 
-## Renovate
+### Renovate
 
 To make `renovate` use the preset from this repository, add the following to the project's `.github/renovate.json`:
 
