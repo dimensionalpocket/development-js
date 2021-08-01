@@ -9,6 +9,7 @@ This package includes common development packages, types, and/or configuration d
 * `standardx`
 * `babel`
 * `release-it` - configuration only (package not included)
+* `renovate` - shared configuration
 
 ## Installation
 
@@ -26,10 +27,10 @@ Some libraries can use default configurations provided by this library. Add them
 {
   ...,
   "babel": {
-    "extends": "./node_modules/@dimensionalpocket/development/config/babel"
+    "extends": "./node_modules/@dimensionalpocket/development/babel"
   },
   "eslintConfig" : {
-    "extends": "./node_modules/@dimensionalpocket/development/config/eslint"
+    "extends": "./node_modules/@dimensionalpocket/development/eslint"
   }
 }
 ```
@@ -42,6 +43,17 @@ StandardX, Mocha, C8, and packages not mentioned above do not properly support `
 
 If you are extending `eslintConfig` like the previous example, you don't need to configure StandardX. The provided ESLint configuration already uses `mocha` as environment, along with the Babel parser.
 
+You can still extend configuration if needed:
+
+```json
+{
+  ...,
+  "standardx": {
+    "globals": ["WebSocket"]
+  }
+}
+```
+
 ### Release-It
 
 To make `release-it` use the configuration from this library, change the `npm run release` command as follows:
@@ -50,8 +62,20 @@ To make `release-it` use the configuration from this library, change the `npm ru
 {
   "scripts": {
     ...,
-    "release": "release-it --config ./node_modules/@dimensionalpocket/development/config/release-it/config.js"
+    "release": "release-it --config ./node_modules/@dimensionalpocket/development/release-it/config.js"
   },
+}
+```
+
+## Renovate
+
+To make `renovate` use the preset from this repository, add the following to the project's `.github/renovate.json`:
+
+```json
+{
+  "extends": [
+    "github>dimensionalpocket/development-js//renovate/default"
+  ]
 }
 ```
 

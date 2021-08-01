@@ -1,0 +1,7 @@
+{
+  "extends": [ "config:base" ],
+  "automergeStrategy": "squash",
+  "prCreation": "not-pending",
+  "stabilityDays": 7,
+  "dependencyDashboard": true
+}

@@ -1,13 +1,13 @@
 {
   "name": "@dimensionalpocket/development",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "description": "Development packages for Node.js projects",
   "main": "index.js",
   "scripts": {
     "test": "npm run lint && NODE_ENV=test c8 mocha",
     "test:ci": "NODE_ENV=test mocha",
     "lint": "standardx --fix",
-    "release": "release-it --config config/release-it/config.js"
+    "release": "release-it --config release-it/config.js"
   },
   "repository": {
     "type": "git",
@@ -40,10 +40,10 @@
     "release-it": "14.10.1"
   },
   "babel": {
-    "extends": "./config/babel"
+    "extends": "./babel"
   },
   "eslintConfig": {
-    "extends": "./config/eslint"
+    "extends": "./eslint"
   },
   "mocha": {
     "recursive": true,
@@ -54,12 +54,7 @@
     "all": true,
     "include": [
       "index.js",
-      "config"
-    ],
-    "exclude": [
-      "config/babel",
-      "config/eslint",
-      "config/release-it"
+      "chai"
     ]
   },
   "engines": {

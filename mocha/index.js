@@ -4,4 +4,4 @@ module.exports = {
   colors: true
 }
 
-// require: "./config/mocha/config.js"
+// require: "./config.js"
