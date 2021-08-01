@@ -1,4 +1,4 @@
 /* eslint-disable */
 
-// TODO: create @webmuds/config before hooking dotenv into mocha
+// TODO: create @dimensionalpocket/config before hooking dotenv into mocha
 // import '../dotenv' // Loads .env.test

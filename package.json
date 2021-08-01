@@ -1,7 +1,7 @@
 {
-  "name": "@webmuds/development",
-  "version": "0.1.1",
-  "description": "Development packages for WebMUDs projects",
+  "name": "@dimensionalpocket/development",
+  "version": "0.1.0",
+  "description": "Development packages for Node.js projects",
   "main": "index.js",
   "scripts": {
     "test": "npm run lint && NODE_ENV=test c8 mocha",
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/webmuds/development.git"
+    "url": "git+https://github.com/dimensionalpocket/development-js.git"
   },
-  "author": "webmuds.com",
+  "author": "dimensionalpocket.com",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/webmuds/development/issues"
+    "url": "https://github.com/dimensionalpocket/development-js/issues"
   },
-  "homepage": "https://github.com/webmuds/development#readme",
+  "homepage": "https://github.com/dimensionalpocket/development-js#readme",
   "dependencies": {
     "@babel/core": "7.14.6",
     "@babel/eslint-parser": "7.14.7",

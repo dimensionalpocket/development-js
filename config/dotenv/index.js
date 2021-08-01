@@ -1,1 +1,1 @@
-// TODO: create @webmuds/config first
+// TODO: create @dimensionalpocket/config first

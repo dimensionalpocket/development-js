@@ -1,4 +1,4 @@
-# @webmuds/development
+# @dimensionalpocket/development
 
 This package includes common development packages, types, and/or configuration defaults used by other projects:
 
@@ -15,7 +15,7 @@ This package includes common development packages, types, and/or configuration d
 Install the package directly from GitHub (X.Y.Z == release tag):
 
 ```shell
-npm i --save-dev -E github:webmuds/development#X.Y.Z
+npm i --save-dev -E github:dimensionalpocket/development-js#X.Y.Z
 ```
 
 ## Configuration
@@ -26,10 +26,10 @@ Some libraries can use default configurations provided by this library. Add them
 {
   ...,
   "babel": {
-    "extends": "./node_modules/@webmuds/development/config/babel"
+    "extends": "./node_modules/@dimensionalpocket/development/config/babel"
   },
   "eslintConfig" : {
-    "extends": "./node_modules/@webmuds/development/config/eslint"
+    "extends": "./node_modules/@dimensionalpocket/development/config/eslint"
   }
 }
 ```
@@ -50,7 +50,7 @@ To make `release-it` use the configuration from this library, change the `npm ru
 {
   "scripts": {
     ...,
-    "release": "release-it --config ./node_modules/@webmuds/development/config/release-it/config.js"
+    "release": "release-it --config ./node_modules/@dimensionalpocket/development/config/release-it/config.js"
   },
 }
 ```
@@ -60,7 +60,7 @@ To make `release-it` use the configuration from this library, change the `npm ru
 In your test files, import and use dependencies from the library directly:
 
 ```javascript
-import { expect, sinon } from '@webmuds/development'
+import { expect, sinon } from '@dimensionalpocket/development'
 
 describe('Your Class', function () {
   // ...
