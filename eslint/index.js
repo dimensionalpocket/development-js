@@ -7,6 +7,7 @@ module.exports = {
     'no-var': 0,
     'prefer-const': 0,
     'no-unused-expressions': 0,
-    'no-unused-vars': 0
+    'no-unused-vars': 0,
+    'accessor-pairs': 0
   }
 }

@@ -79,9 +79,9 @@ To make `renovate` use the preset from this repository, add the following to the
 }
 ```
 
-## Usage
+## Usage in Tests
 
-In your test files, import and use dependencies from the library directly:
+In your test files, import and use `expect`, `chai`, and `sinon` from the library directly:
 
 ```javascript
 import { expect, sinon } from '@dimensionalpocket/development'
