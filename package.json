@@ -20,8 +20,8 @@
   },
   "homepage": "https://github.com/dimensionalpocket/development-js#readme",
   "dependencies": {
-    "@babel/core": "7.14.6",
-    "@babel/eslint-parser": "7.14.7",
+    "@babel/core": "7.15.0",
+    "@babel/eslint-parser": "7.15.0",
     "@types/chai": "4.2.21",
     "@types/chai-as-promised": "7.1.4",
     "@types/mocha": "9.0.0",
