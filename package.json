@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "npm run lint && NODE_ENV=test c8 mocha",
-    "test:ci": "NODE_ENV=test mocha",
-    "lint": "standardx --fix",
+    "test:ci": "npm run lint && NODE_ENV=test mocha",
+    "lint": "standardx --fix --verbose",
     "release": "release-it --config release-it/config.js"
   },
   "repository": {
@@ -58,6 +58,6 @@
     ]
   },
   "engines": {
-    "node": ">= 14"
+    "node": ">= 14.17.1"
   }
 }
