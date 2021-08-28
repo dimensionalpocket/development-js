@@ -8,7 +8,6 @@ This package includes common development packages, types, and/or configuration d
 * `c8`
 * `standardx`
 * `babel`
-* `release-it` - configuration only (package not included)
 * `renovate` - shared configuration
 
 ## Installation
@@ -16,7 +15,7 @@ This package includes common development packages, types, and/or configuration d
 Install the package directly from GitHub (X.Y.Z == release tag):
 
 ```shell
-npm i --save-dev -E github:dimensionalpocket/development-js#X.Y.Z
+npm i -D -E github:dimensionalpocket/development-js#X.Y.Z
 ```
 
 ## Configuration
@@ -51,19 +50,6 @@ You can still extend configuration if needed:
   "standardx": {
     "globals": ["WebSocket"]
   }
-}
-```
-
-### Release-It
-
-To make `release-it` use the configuration from this library, change the `npm run release` command as follows:
-
-```json
-{
-  "scripts": {
-    ...,
-    "release": "release-it --config ./node_modules/@dimensionalpocket/development/release-it/config.js"
-  },
 }
 ```
 
