@@ -7,7 +7,7 @@
     "test": "npm run lint && NODE_ENV=test c8 mocha",
     "test:ci": "npm run lint && NODE_ENV=test mocha",
     "lint": "standardx --fix --verbose",
-    "release": "release-it --config release-it/config.js"
+    "release": "release-it --config ./node_modules/@dimensionalpocket/release/config/default.js"
   },
   "repository": {
     "type": "git",
@@ -37,7 +37,7 @@
     "standardx": "7.0.0"
   },
   "devDependencies": {
-    "release-it": "14.11.5"
+    "@dimensionalpocket/release": "github:dimensionalpocket/release-js#0.1.1"
   },
   "babel": {
     "extends": "./babel"
