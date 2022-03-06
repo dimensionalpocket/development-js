@@ -5,7 +5,6 @@
   "main": "index.js",
   "scripts": {
     "test": "npm run lint && NODE_ENV=test c8 mocha",
-    "test:ci": "npm run lint && NODE_ENV=test mocha",
     "lint": "standardx --fix --verbose",
     "release": "release-it --config ./node_modules/@dimensionalpocket/release/config/defaults.js"
   },
@@ -51,7 +50,7 @@
     "colors": true
   },
   "c8": {
-    "all": true,
+    "extends": "./c8/default.json",
     "include": [
       "index.js",
       "chai"

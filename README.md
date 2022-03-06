@@ -10,13 +10,7 @@ This package includes common development packages, types, and/or configuration d
 * `babel`
 * `renovate` - shared configuration
 
-## Installation
-
-Install the package directly from GitHub (X.Y.Z == release tag):
-
-```shell
-npm i -D -E github:dimensionalpocket/development-js#X.Y.Z
-```
+It also includes a [reusable Github Action](#github-actions) for Node builds.
 
 ## Configuration
 
@@ -28,15 +22,18 @@ Some libraries can use default configurations provided by this library. Add them
   "babel": {
     "extends": "./node_modules/@dimensionalpocket/development/babel"
   },
-  "eslintConfig" : {
+  "eslintConfig": {
     "extends": "./node_modules/@dimensionalpocket/development/eslint"
+  },
+  "c8": {
+    "extends": "./node_modules/@dimensionalpocket/c8/default.json"
   }
 }
 ```
 
 Alongside `extends`, you can add extra configuration if you need settings to differ from defaults.
 
-StandardX, Mocha, C8, and packages not mentioned above do not properly support `extends` or custom configuration files and must be manually configured.
+StandardX, Mocha, and packages not mentioned above do not properly support `extends` or custom configuration files and must be manually configured.
 
 ### StandardX
 
@@ -65,6 +62,22 @@ To make `renovate` use the preset from this repository, add the following to the
 }
 ```
 
+## Github Actions
+
+This repository includes a **reusable workflow** for Node builds.
+
+To use it, replace your workflow file with the following:
+
+```yaml
+name: Node.js Build
+on: push
+jobs:
+  build:
+    uses: dimensionalpocket/development-js/.github/workflows/default-node-build.yml@X.Y.Z # replace with release tag
+```
+
+The workflow supports a number of input variables. Check `.github/workflows/default-node-build.yml` for details.
+
 ## Usage in Tests
 
 In your test files, import and use `expect`, `chai`, and `sinon` from the library directly:
@@ -76,3 +89,15 @@ describe('Your Class', function () {
   // ...
 })
 ```
+
+## Installation
+
+Install the package directly from GitHub (X.Y.Z == release tag):
+
+```shell
+npm i -D -E github:dimensionalpocket/development-js#X.Y.Z
+```
+
+## License
+
+MIT
