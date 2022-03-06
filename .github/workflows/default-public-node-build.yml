@@ -1,0 +1,36 @@
+# This is a reusable workflow.
+# https://docs.github.com/en/actions/using-workflows/reusing-workflows
+name: Default Public Node.js Build
+
+on:
+  workflow_call:
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x, 16.x, 17.x]
+
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/cache@v2
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-node-
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+
+    - run: npm ci
+    - run: npm run test:ci
+
+    # Creates code coverage comments for PRs only
+    - uses: romeovs/lcov-reporter-action@v0.3.1
+      if: ${{ github.event_name == 'pull_request' }}
+      delete-old-comments: true

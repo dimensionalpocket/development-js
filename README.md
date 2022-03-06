@@ -28,15 +28,18 @@ Some libraries can use default configurations provided by this library. Add them
   "babel": {
     "extends": "./node_modules/@dimensionalpocket/development/babel"
   },
-  "eslintConfig" : {
+  "eslintConfig": {
     "extends": "./node_modules/@dimensionalpocket/development/eslint"
+  },
+  "c8": {
+    "extends": "./node_modules/@dimensionalpocket/c8/default.json"
   }
 }
 ```
 
 Alongside `extends`, you can add extra configuration if you need settings to differ from defaults.
 
-StandardX, Mocha, C8, and packages not mentioned above do not properly support `extends` or custom configuration files and must be manually configured.
+StandardX, Mocha, and packages not mentioned above do not properly support `extends` or custom configuration files and must be manually configured.
 
 ### StandardX
 

@@ -51,7 +51,7 @@
     "colors": true
   },
   "c8": {
-    "all": true,
+    "extends": "./c8/default.json",
     "include": [
       "index.js",
       "chai"
