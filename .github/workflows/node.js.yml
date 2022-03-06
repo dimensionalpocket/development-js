@@ -4,8 +4,4 @@ on: push
 
 jobs:
   build:
-    uses: ./.github/workflows/default-public-node-build.yml
-    with:
-      node_matrix: '["14.x", "16.x", "17.x"]'
-      node_version_coverage: '17.x'
-      coverage_comments: true
+    uses: ./.github/workflows/default-node-build.yml

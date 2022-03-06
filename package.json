@@ -5,9 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "npm run lint && NODE_ENV=test c8 mocha",
-    "test:ci": "NODE_ENV=test c8 mocha",
     "lint": "standardx --fix --verbose",
-    "lint:ci": "standardx --verbose",
     "release": "release-it --config ./node_modules/@dimensionalpocket/release/config/defaults.js"
   },
   "repository": {

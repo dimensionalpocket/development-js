@@ -1,0 +1,72 @@
+# This is a reusable workflow.
+# https://docs.github.com/en/actions/using-workflows/reusing-workflows
+name: Node.js Build (Shared)
+
+on:
+  workflow_call:
+    inputs:
+      # Node versions to test against.
+      # Using JSON strings because arrays are not supported.
+      node_matrix:
+        description: 'A JSON string of an array of Node versions to run tests on'
+        type: string
+        default: '["14.x", "16.x", "17.x"]'
+
+      # Only upload coverage report for one of the Node versions in the matrix.
+      # Must be present in the matrix. E.g., "17.x"
+      # Usually the most recent/stable version.
+      # If ommited, coverage reports will not be generated.
+      node_version_coverage:
+        description: 'The Node version to use when uploading the Coverage Report'
+        type: string
+
+      private_access_token:
+        description: 'A Github Token to allow npm to fetch private repos'
+        type: string
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: ${{ fromJSON(inputs.node_matrix) }}
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - uses: actions/cache@v2
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-node-
+
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+
+    - name: Set Private Access Token (if present)
+      run: git config --global url."https://${{inputs.private_access_token}}@github.com/".insteadOf ssh://git@github.com/
+      if: inputs.private_access_token != null
+
+    - name: Install Dependencies
+      run: npm ci
+
+    - name: Check for lint errors
+      run: npx standardx --verbose
+
+    - name: Run tests
+      run: npx mocha
+      if: matrix.node-version != inputs.node_version_coverage
+
+    - name: Run tests with coverage
+      run: npx c8 mocha
+      if: matrix.node-version == inputs.node_version_coverage
+
+    # - uses: romeovs/lcov-reporter-action@v0.3.1
+    #   if: matrix.node-version == inputs.node_version_coverage
+    #   with:
+    #     # Bugged: https://github.com/romeovs/lcov-reporter-action/issues/33
+    #     delete-old-comments: true

@@ -64,28 +64,19 @@ To make `renovate` use the preset from this repository, add the following to the
 
 ## Github Actions
 
-This repository includes a **reusable workflow** for Node builds. To use it:
+This repository includes a **reusable workflow** for Node builds.
 
-1. First make sure C8 is configured with the `lcovonly` report.
-   * Extending from `./node_modules/@dimensionalpocket/c8/default.json` will do it.
-2. Replace your workflow file with the following:
+To use it, replace your workflow file with the following:
+
 ```yaml
 name: Node.js Build
 on: push
 jobs:
   build:
-    uses: dimensionalpocket/development-js/.github/workflows/default-public-node-build.yml@main
-    with:
-      node_matrix: '["14.x", "16.x", "17.x"]'
-      node_version_coverage: '17.x'
+    uses: dimensionalpocket/development-js/.github/workflows/default-node-build.yml@X.Y.Z # replace with release tag
 ```
-3. Include the following in your `package.json` scripts:
-```json
-{
-  "test:ci": "NODE_ENV=test c8 mocha",
-  "lint:ci": "standardx --verbose",
-}
-```
+
+The workflow supports a number of input variables. Check `.github/workflows/default-node-build.yml` for details.
 
 ## Usage in Tests
 
