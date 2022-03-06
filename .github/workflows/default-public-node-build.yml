@@ -4,34 +4,50 @@ name: Default Public Node.js Build
 
 on:
   workflow_call:
+    inputs:
+      # Using the node matrix as an input since it can be different across projects.
+      # Using JSON strings because arrays are not supported.
+      node_matrix:
+        description: 'A JSON string of an array of Node versions to run tests on'
+        required: true
+        type: string
+      
+      # Only upload report for one of the matrix jobs.
+      node_version_coverage:
+        description: 'The Node version to use when uploading the Coverage Report'
+        required: true
+        type: string
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
-        node-version: [14.x, 16.x, 17.x]
+        node-version: ${{ fromJSON(inputs.node_matrix) }}
 
     steps:
     - uses: actions/checkout@v3
+
     - uses: actions/cache@v2
       with:
         path: ~/.npm
         key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
         restore-keys: |
           ${{ runner.os }}-node-
+
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
 
     - run: npm ci
+
+    - run: npm run lint:ci
     - run: npm run test:ci
 
-    # Creates code coverage comments for PRs only
     - uses: romeovs/lcov-reporter-action@v0.3.1
-      if: ${{ github.event_name == 'pull_request' }}
-      with:
-        delete-old-comments: true
+      if: matrix.node-version == inputs.node_version_coverage
+      # Bugged: https://github.com/romeovs/lcov-reporter-action/issues/33
+      # with:
+      #   delete-old-comments: true
