@@ -51,7 +51,7 @@ jobs:
     - run: npm run lint:ci
     - run: npm run test:ci
 
-    - uses: romeovs/lcov-reporter-action@v0.3.1
+    - uses: dimensionalpocket/lcov-reporter-action@delete-comments-fix
       if: inputs.coverage_comments && matrix.node-version == inputs.node_version_coverage
       # Bugged: https://github.com/romeovs/lcov-reporter-action/issues/33
       with:
