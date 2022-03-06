@@ -8,3 +8,4 @@ jobs:
     with:
       node_matrix: '["14.x", "16.x", "17.x"]'
       node_version_coverage: '17.x'
+      coverage_comments: true

@@ -9,14 +9,19 @@ on:
       # Using JSON strings because arrays are not supported.
       node_matrix:
         description: 'A JSON string of an array of Node versions to run tests on'
-        required: true
         type: string
+        required: true
       
       # Only upload report for one of the matrix jobs.
       node_version_coverage:
         description: 'The Node version to use when uploading the Coverage Report'
-        required: true
         type: string
+        required: true
+      
+      coverage_comments:
+        description: 'Enable or disable coverage comments'
+        type: boolean
+        default: false
 
 jobs:
   build:
@@ -47,7 +52,7 @@ jobs:
     - run: npm run test:ci
 
     - uses: romeovs/lcov-reporter-action@v0.3.1
-      if: matrix.node-version == inputs.node_version_coverage
+      if: inputs.coverage_comments && matrix.node-version == inputs.node_version_coverage
       # Bugged: https://github.com/romeovs/lcov-reporter-action/issues/33
-      # with:
-      #   delete-old-comments: true
+      with:
+        delete-old-comments: true
