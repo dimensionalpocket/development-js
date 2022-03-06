@@ -28,7 +28,7 @@ Some libraries can use default configurations provided by this library. Add them
     "extends": "./node_modules/@dimensionalpocket/development/eslint"
   },
   "c8": {
-    "extends": "./node_modules/@dimensionalpocket/c8/default.json"
+    "extends": "./node_modules/@dimensionalpocket/development/c8/default.json"
   }
 }
 ```
