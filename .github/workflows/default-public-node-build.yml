@@ -33,4 +33,5 @@ jobs:
     # Creates code coverage comments for PRs only
     - uses: romeovs/lcov-reporter-action@v0.3.1
       if: ${{ github.event_name == 'pull_request' }}
-      delete-old-comments: true
+      with:
+        delete-old-comments: true
