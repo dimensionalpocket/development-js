@@ -32,6 +32,11 @@ jobs:
       matrix:
         node-version: ${{ fromJSON(inputs.node_matrix) }}
 
+    env:
+      # Cannot use `secret` in conditions so we set presence in an env variable
+      # -- https://github.com/actions/runner/issues/953#issuecomment-821537265
+      HAVE_GITHUB_PAT: ${{ secrets.GITHUB_PAT != '' }}
+
     steps:
     - uses: actions/checkout@v3
       with:
@@ -51,8 +56,6 @@ jobs:
 
     - name: Set Private Access Token (if present)
       run: git config --global url."https://${{secrets.GITHUB_PAT}}@github.com/".insteadOf ssh://git@github.com/
-      # Cannot use `secret` in conditions
-      # -- https://github.com/actions/runner/issues/953#issuecomment-821537265
       if: env.HAVE_GITHUB_PAT == 'true'
 
     - name: Install Dependencies
