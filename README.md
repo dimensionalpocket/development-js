@@ -78,17 +78,7 @@ jobs:
     uses: dimensionalpocket/development-js/.github/workflows/default-node-build.yml@X.Y.Z # replace with release tag
 ```
 
-The workflow supports a number of input variables. Check `.github/workflows/default-node-build.yml` for details.
-
-To be able to fetch private dependencies from GitHub, send a secret named `GITHUB_PAT` (private access token) with the secret from your repo/org:
-
-```yaml
-jobs:
-  build:
-    uses: dimensionalpocket/development-js/.github/workflows/default-node-build.yml@X.Y.Z
-    secrets:
-      GITHUB_PAT: ${{ secrets.myRepoToken }}
-```
+The workflow supports a number of input variables, including secrets. Check `.github/workflows/default-node-build.yml` for details.
 
 ## Usage in Tests
 

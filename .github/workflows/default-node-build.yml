@@ -20,6 +20,10 @@ on:
         description: 'The Node version to use when uploading the Coverage Report'
         type: string
 
+    secrets:
+      GITHUB_PAT:
+        description: 'A private access token to fetch private GitHub dependencies'
+
 jobs:
   build:
     runs-on: ubuntu-latest
