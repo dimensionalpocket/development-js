@@ -20,9 +20,9 @@ on:
         description: 'The Node version to use when uploading the Coverage Report'
         type: string
 
-      private_access_token:
-        description: 'A Github Token to allow npm to fetch private repos'
-        type: string
+    secrets:
+      GITHUB_PAT:
+        description: 'A private access token to fetch private GitHub dependencies'
 
 jobs:
   build:
@@ -32,8 +32,15 @@ jobs:
       matrix:
         node-version: ${{ fromJSON(inputs.node_matrix) }}
 
+    env:
+      # Cannot use `secret` in conditions so we set presence in an env variable
+      # -- https://github.com/actions/runner/issues/953#issuecomment-821537265
+      HAVE_GITHUB_PAT: ${{ secrets.GITHUB_PAT != '' }}
+
     steps:
     - uses: actions/checkout@v3
+      with:
+        persist-credentials: ${{ env.HAVE_GITHUB_PAT != 'true' }}
 
     - uses: actions/cache@v2
       with:
@@ -48,8 +55,8 @@ jobs:
         node-version: ${{ matrix.node-version }}
 
     - name: Set Private Access Token (if present)
-      run: git config --global url."https://${{inputs.private_access_token}}@github.com/".insteadOf ssh://git@github.com/
-      if: inputs.private_access_token != null
+      run: git config --global url."https://${{secrets.GITHUB_PAT}}@github.com/".insteadOf ssh://git@github.com/
+      if: env.HAVE_GITHUB_PAT == 'true'
 
     - name: Install Dependencies
       run: npm ci

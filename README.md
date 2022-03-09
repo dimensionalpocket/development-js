@@ -78,7 +78,7 @@ jobs:
     uses: dimensionalpocket/development-js/.github/workflows/default-node-build.yml@X.Y.Z # replace with release tag
 ```
 
-The workflow supports a number of input variables. Check `.github/workflows/default-node-build.yml` for details.
+The workflow supports a number of input variables, including secrets. Check `.github/workflows/default-node-build.yml` for details.
 
 ## Usage in Tests
 
