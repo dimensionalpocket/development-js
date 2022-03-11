@@ -36,7 +36,7 @@
     "standardx": "7.0.0"
   },
   "devDependencies": {
-    "@dimensionalpocket/release": "github:dimensionalpocket/release-js#0.2.3"
+    "@dimensionalpocket/release": "github:dimensionalpocket/release-js#0.2.4"
   },
   "babel": {
     "extends": "./babel"
