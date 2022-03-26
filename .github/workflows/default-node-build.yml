@@ -10,7 +10,7 @@ on:
       node_matrix:
         description: 'A JSON string of an array of Node versions to run tests on'
         type: string
-        default: '["14.x", "16.x", "17.x"]'
+        default: '["16.x", "17.x"]'
 
       # Only upload coverage report for one of the Node versions in the matrix.
       # Must be present in the matrix. E.g., "17.x"
