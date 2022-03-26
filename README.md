@@ -71,10 +71,15 @@ This repository includes a **reusable workflow** for Node builds.
 To use it, replace your workflow file with the following:
 
 ```yaml
-name: Node.js Build
-on: push
+name: Node.js
+
+on:
+  pull_request:
+  push:
+    branches: main
+
 jobs:
-  build:
+  default:
     uses: dimensionalpocket/development-js/.github/workflows/default-node-build.yml@X.Y.Z # replace with release tag
 ```
 
