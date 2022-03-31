@@ -1,7 +1,14 @@
 {
-  "extends": [ "config:base" ],
+  "extends": ["config:base"],
   "automergeStrategy": "squash",
   "prCreation": "not-pending",
-  "stabilityDays": 3,
-  "dependencyDashboard": true
+  "stabilityDays": 7,
+  "dependencyDashboard": true,
+  "packageRules": [
+    {
+      "matchPackagePrefixes": ["@dimensionalpocket/"],
+      "groupName": "DimensionalPocket",
+      "stabilityDays": 1
+    }
+  ]
 }

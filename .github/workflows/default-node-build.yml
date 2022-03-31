@@ -1,6 +1,6 @@
 # This is a reusable workflow.
 # https://docs.github.com/en/actions/using-workflows/reusing-workflows
-name: Node.js Build (Shared)
+name: Node.js (Shared)
 
 on:
   workflow_call:
