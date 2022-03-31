@@ -3,6 +3,10 @@
     {
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
       "automerge": true
+    },
+    {
+      "matchPackageNames": ["three", "jsdom", "node"],
+      "automerge": false
     }
   ]
 }

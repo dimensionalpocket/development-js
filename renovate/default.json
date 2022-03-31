@@ -9,10 +9,6 @@
       "matchPackagePrefixes": ["@dimensionalpocket/"],
       "groupName": "DimensionalPocket",
       "stabilityDays": 1
-    },
-    {
-      "matchPackageNames": ["three", "jsdom", "node"],
-      "automerge": false
     }
   ]
 }
