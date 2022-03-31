@@ -6,14 +6,12 @@
   "dependencyDashboard": true,
   "packageRules": [
     {
-      "matchPackagePrefixes": [
-        "@dimensionalpocket/"
-      ],
+      "matchPackagePrefixes": ["@dimensionalpocket/"],
       "groupName": "DimensionalPocket",
       "stabilityDays": 1
     },
     {
-      "matchPackageNames": ["three", "jsdom"],
+      "matchPackageNames": ["three", "jsdom", "node"],
       "automerge": false
     }
   ]
