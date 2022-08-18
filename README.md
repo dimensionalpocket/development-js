@@ -12,7 +12,7 @@ This package includes common development packages, types, and/or configuration d
 * `babel`
 * `renovate` - shared configuration
 
-It also includes a [reusable Github Action](#github-actions) for Node builds.
+It also includes a [reusable Github Action](#github-actions) for Node builds, and a shared workflow for **Release Please**.
 
 ## Configuration
 
@@ -79,13 +79,13 @@ on:
 
 jobs:
   default:
-    uses: dimensionalpocket/development-js/.github/workflows/default-node-build.yml@1.0.0
+    uses: dimensionalpocket/development-js/.github/workflows/default-node-build.yml@v1.0.0
 ```
 <!-- x-release-please-end -->
 
 The workflow supports a number of input variables, including secrets. Check `.github/workflows/default-node-build.yml` for details.
 
-## Release Please
+### Release Please
 
 This package includes a shared workflow for [**Release Please**](https://github.com/googleapis/release-please).
 
@@ -101,7 +101,7 @@ on:
 
 jobs:
   default:
-    uses: dimensionalpocket/development-js/.github/workflows/default-release.yml@1.0.0
+    uses: dimensionalpocket/development-js/.github/workflows/default-release.yml@v1.0.0
 ```
 <!-- x-release-please-end -->
 
@@ -134,7 +134,7 @@ Install the package directly from GitHub:
 
 <!-- x-release-please-start-version -->
 ```shell
-npm i -D -E github:dimensionalpocket/development-js#1.0.0
+npm i -D -E github:dimensionalpocket/development-js#v1.0.0
 ```
 <!-- x-release-please-end -->
 
