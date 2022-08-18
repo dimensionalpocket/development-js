@@ -19,7 +19,8 @@ jobs:
         id: release-pr
         with:
           release-type: node
-          # package-name: ${{ inputs.repository_name }}
-          extra-files: |
-            README.md
-            version.json
+          extra-files:
+            - README.md
+            - type: json
+              path: version.json
+              jsonpath: "$.version"

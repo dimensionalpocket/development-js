@@ -70,6 +70,7 @@ This repository includes a **reusable workflow** for Node builds.
 
 To use it, replace your workflow file with the following:
 
+<!-- x-release-please-start-version -->
 ```yaml
 name: Node.js
 
@@ -82,6 +83,7 @@ jobs:
   default:
     uses: dimensionalpocket/development-js/.github/workflows/default-node-build.yml@0.7.0
 ```
+<!-- x-release-please-end -->
 
 The workflow supports a number of input variables, including secrets. Check `.github/workflows/default-node-build.yml` for details.
 
@@ -101,9 +103,11 @@ describe('Your Class', function () {
 
 Install the package directly from GitHub:
 
+<!-- x-release-please-start-version -->
 ```shell
 npm i -D -E github:dimensionalpocket/development-js#0.7.0
 ```
+<!-- x-release-please-end -->
 
 ## License
 
