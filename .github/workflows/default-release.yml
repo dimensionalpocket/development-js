@@ -19,7 +19,6 @@ jobs:
         id: release-pr
         with:
           release-type: node
-          extra-files:
-            - type: json
-              path: version.json
-              jsonpath: "$.version"
+          extra-files: |
+            README.md
+            version.json
