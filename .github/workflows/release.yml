@@ -1,0 +1,11 @@
+name: Release
+
+on:
+  push:
+    branches: main
+
+jobs:
+  default:
+    uses: ./.github/workflows/default-release.yml
+    with:
+      repository_name: '@dimensionalpocket/development'

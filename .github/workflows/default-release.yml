@@ -1,0 +1,25 @@
+# This is a reusable workflow.
+# https://docs.github.com/en/actions/using-workflows/reusing-workflows
+name: Release (Shared)
+
+on:
+  workflow_call:
+    inputs:
+      repository_name:
+        description: 'The name of the repository/package to create a release for'
+        type: string
+        required: true
+
+jobs:
+  manage-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create/Update Release PR
+        uses: google-github-actions/release-please-action@v3
+        id: release-pr
+        with:
+          release-type: node
+          # package-name: ${{ inputs.repository_name }}
+          extra-files: |
+            README.md
+            version.json
