@@ -4,11 +4,6 @@ name: Release (Shared)
 
 on:
   workflow_call:
-    inputs:
-      repository_name:
-        description: 'The name of the repository/package to create a release for'
-        type: string
-        required: true
 
 jobs:
   manage-release:
