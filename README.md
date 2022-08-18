@@ -76,8 +76,6 @@ name: Node.js
 
 on:
   pull_request:
-  push:
-    branches: main
 
 jobs:
   default:
@@ -86,6 +84,37 @@ jobs:
 <!-- x-release-please-end -->
 
 The workflow supports a number of input variables, including secrets. Check `.github/workflows/default-node-build.yml` for details.
+
+## Release Please
+
+This package includes a shared workflow for [**Release Please**](https://github.com/googleapis/release-please).
+
+To use it, create `./github/workflows/release.yml` in the project with the following content:
+
+<!-- x-release-please-start-version -->
+```yaml
+name: Release
+
+on:
+  push:
+    branches: main
+
+jobs:
+  default:
+    uses: dimensionalpocket/development-js/.github/workflows/default-release.yml@0.7.0
+```
+<!-- x-release-please-end -->
+
+Next, create a `version.js` file in the project's root folder with the following content:
+
+```js
+export const VERSION = "X.Y.Z" /* x-release-please-version */
+```
+
+Then:
+
+- Replace `X.Y.Z` with the current version of the package from `package.json`;
+- **Keep the in-line comment**, that's how Release Please will replace the version number when creating a release PR.
 
 ## Usage in Tests
 

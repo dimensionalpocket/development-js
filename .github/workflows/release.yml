@@ -7,5 +7,3 @@ on:
 jobs:
   default:
     uses: ./.github/workflows/default-release.yml
-    with:
-      repository_name: '@dimensionalpocket/development'
