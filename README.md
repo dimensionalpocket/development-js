@@ -80,7 +80,7 @@ on:
 
 jobs:
   default:
-    uses: dimensionalpocket/development-js/.github/workflows/default-node-build.yml@X.Y.Z # replace with release tag
+    uses: dimensionalpocket/development-js/.github/workflows/default-node-build.yml@0.7.0
 ```
 
 The workflow supports a number of input variables, including secrets. Check `.github/workflows/default-node-build.yml` for details.
@@ -99,10 +99,10 @@ describe('Your Class', function () {
 
 ## Installation
 
-Install the package directly from GitHub (X.Y.Z == release tag):
+Install the package directly from GitHub:
 
 ```shell
-npm i -D -E github:dimensionalpocket/development-js#X.Y.Z
+npm i -D -E github:dimensionalpocket/development-js#0.7.0
 ```
 
 ## License
