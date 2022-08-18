@@ -14,6 +14,7 @@ jobs:
         id: release-pr
         with:
           release-type: node
+          include-v-in-tag: false
           extra-files: |
             README.md
             version.js
