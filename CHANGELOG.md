@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/dimensionalpocket/development-js/compare/v1.0.0...v1.0.1) (2022-08-18)
+
+
+### Bug Fixes
+
+* remove v from release tags ([#115](https://github.com/dimensionalpocket/development-js/issues/115)) ([0c41747](https://github.com/dimensionalpocket/development-js/commit/0c417472b4ea36f6c21a63218519faacc1af7e09))
+
 ## [1.0.0](https://github.com/dimensionalpocket/development-js/compare/0.7.0...v1.0.0) (2022-08-18)
 
 
