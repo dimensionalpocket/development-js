@@ -108,7 +108,7 @@ jobs:
 Next, create a `version.js` file in the project's root folder with the following content:
 
 ```js
-export const VERSION = "X.Y.Z" /* x-release-please-version */
+export const VERSION = 'X.Y.Z' /* x-release-please-version */
 ```
 
 Then:
