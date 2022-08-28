@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.2](https://github.com/dimensionalpocket/development-js/compare/v1.0.1...1.0.2) (2022-08-28)
+
+
+### Bug Fixes
+
+* bump to make include-v-in-tag work ([#117](https://github.com/dimensionalpocket/development-js/issues/117)) ([606998b](https://github.com/dimensionalpocket/development-js/commit/606998b1f585af8c1e71d23182e6015185800bf8))
+* remove "v" from tags in README ([198be21](https://github.com/dimensionalpocket/development-js/commit/198be212c0a3ac1e7a3357244d3f1abc9c1ef1b7))
+
 ## [1.0.1](https://github.com/dimensionalpocket/development-js/compare/v1.0.0...v1.0.1) (2022-08-18)
 
 
