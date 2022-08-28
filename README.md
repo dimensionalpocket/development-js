@@ -79,7 +79,7 @@ on:
 
 jobs:
   default:
-    uses: dimensionalpocket/development-js/.github/workflows/default-node-build.yml@1.0.1
+    uses: dimensionalpocket/development-js/.github/workflows/default-node-build.yml@1.0.2
 ```
 <!-- x-release-please-end -->
 
@@ -101,7 +101,7 @@ on:
 
 jobs:
   default:
-    uses: dimensionalpocket/development-js/.github/workflows/default-release.yml@1.0.1
+    uses: dimensionalpocket/development-js/.github/workflows/default-release.yml@1.0.2
 ```
 <!-- x-release-please-end -->
 
@@ -134,7 +134,7 @@ Install the package directly from GitHub:
 
 <!-- x-release-please-start-version -->
 ```shell
-npm i -D -E github:dimensionalpocket/development-js#1.0.1
+npm i -D -E github:dimensionalpocket/development-js#1.0.2
 ```
 <!-- x-release-please-end -->
 
