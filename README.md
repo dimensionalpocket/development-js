@@ -1,6 +1,6 @@
 # @dimensionalpocket/development
 
-[![build](https://github.com/dimensionalpocket/development-js/actions/workflows/node.js.yml/badge.svg)](https://github.com/dimensionalpocket/development-js/actions/workflows/node.js.yml) [![Total alerts](https://img.shields.io/lgtm/alerts/g/dimensionalpocket/development-js.svg)](https://lgtm.com/projects/g/dimensionalpocket/development-js/alerts/) [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/dimensionalpocket/development-js.svg)](https://lgtm.com/projects/g/dimensionalpocket/development-js/context:javascript)
+[![build](https://github.com/dimensionalpocket/development-js/actions/workflows/node.js.yml/badge.svg)](https://github.com/dimensionalpocket/development-js/actions/workflows/node.js.yml)
 
 This package includes common development packages, types, and/or configuration defaults used by other projects:
 
