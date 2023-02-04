@@ -18,3 +18,5 @@ jobs:
           extra-files: |
             README.md
             version.js
+            src/version.js
+            config/version.js

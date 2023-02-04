@@ -105,7 +105,7 @@ jobs:
 ```
 <!-- x-release-please-end -->
 
-Next, create a `version.js` file in the project's root folder with the following content:
+Next, create a `version.js` file with the following content:
 
 ```js
 export const VERSION = 'X.Y.Z' /* x-release-please-version */
@@ -115,6 +115,8 @@ Then:
 
 - Replace `X.Y.Z` with the current version of the package from `package.json`;
 - **Keep the in-line comment**, that's how Release Please will replace the version number when creating a release PR.
+
+The `version.js` file can be placed in the root, `src`, or `config` folders.
 
 ## Usage in Tests
 
