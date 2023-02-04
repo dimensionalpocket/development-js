@@ -2,5 +2,11 @@
   "extends": [
     "github>dimensionalpocket/development-js//renovate/default",
     "github>dimensionalpocket/development-js//renovate/automerge"
+  ],
+  "packageRules": [
+    {
+      "matchManagers": ["github-actions"],
+      "semanticCommitType": "fix"
+    }
   ]
 }
