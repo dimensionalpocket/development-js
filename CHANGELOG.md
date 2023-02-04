@@ -1,5 +1,34 @@
 # Changelog
 
+## [1.1.0](https://github.com/dimensionalpocket/development-js/compare/1.0.2...1.1.0) (2023-02-04)
+
+
+### Features
+
+* Support additional version.js locations ([#141](https://github.com/dimensionalpocket/development-js/issues/141)) ([41e6517](https://github.com/dimensionalpocket/development-js/commit/41e6517e1024c1db22590edeaf1cce5efcd6dea4))
+
+
+### Bug Fixes
+
+* **deps:** bump json5 from 1.0.1 to 1.0.2 ([#140](https://github.com/dimensionalpocket/development-js/issues/140)) ([f12c966](https://github.com/dimensionalpocket/development-js/commit/f12c966cb6227f95b2f1282aaa0e1668b16547ed))
+* **deps:** update babel monorepo ([#119](https://github.com/dimensionalpocket/development-js/issues/119)) ([8b22eaf](https://github.com/dimensionalpocket/development-js/commit/8b22eaf04467239f3d76cf8dc850052fc5338939))
+* **deps:** update dependency @babel/core to v7.20.12 ([#137](https://github.com/dimensionalpocket/development-js/issues/137)) ([72c0120](https://github.com/dimensionalpocket/development-js/commit/72c0120ec963fec4d3619c1fc1c12ebd3296e047))
+* **deps:** update dependency @babel/core to v7.20.2 ([#126](https://github.com/dimensionalpocket/development-js/issues/126)) ([4bf5184](https://github.com/dimensionalpocket/development-js/commit/4bf5184944e9d6d470001ba32bd2fab67dd0768f))
+* **deps:** update dependency @babel/core to v7.20.7 ([#133](https://github.com/dimensionalpocket/development-js/issues/133)) ([e59ee60](https://github.com/dimensionalpocket/development-js/commit/e59ee604b722aa4efc94dc08fa5708c5b8e293f0))
+* **deps:** update dependency @types/mocha to v10 ([#121](https://github.com/dimensionalpocket/development-js/issues/121)) ([a462171](https://github.com/dimensionalpocket/development-js/commit/a46217135e4ab3927609aa46139a76665e2f4005))
+* **deps:** update dependency @types/node to v16.11.68 ([#107](https://github.com/dimensionalpocket/development-js/issues/107)) ([9d230fe](https://github.com/dimensionalpocket/development-js/commit/9d230fed74cc6a16c4ad3e2f34d4623dde565fef))
+* **deps:** update dependency @types/node to v18 ([#125](https://github.com/dimensionalpocket/development-js/issues/125)) ([0180774](https://github.com/dimensionalpocket/development-js/commit/018077480aa80acad1952eda6eb9bacefc4ce465))
+* **deps:** update dependency @types/node to v18.11.18 ([#136](https://github.com/dimensionalpocket/development-js/issues/136)) ([9c775d1](https://github.com/dimensionalpocket/development-js/commit/9c775d19e5aa596ce35eebc94e13055d4b8c2daa))
+* **deps:** update dependency @types/node to v18.11.9 ([#127](https://github.com/dimensionalpocket/development-js/issues/127)) ([723e6fc](https://github.com/dimensionalpocket/development-js/commit/723e6fc4021b1631ee4e82fa7af14027c591f004))
+* **deps:** update dependency @types/sinon-chai to v3.2.9 ([#130](https://github.com/dimensionalpocket/development-js/issues/130)) ([7e36bbf](https://github.com/dimensionalpocket/development-js/commit/7e36bbfd8da2ca38ff79211bba2a4450828941dd))
+* **deps:** update dependency chai to v4.3.7 ([#131](https://github.com/dimensionalpocket/development-js/issues/131)) ([3ede202](https://github.com/dimensionalpocket/development-js/commit/3ede202414028d736ffd55fd8a675caa4ff7be7f))
+* **deps:** update dependency mocha to v10.1.0 ([#124](https://github.com/dimensionalpocket/development-js/issues/124)) ([72d4ee8](https://github.com/dimensionalpocket/development-js/commit/72d4ee885d27d5ca7cfdf439af38487f09d21ae5))
+* **deps:** update dependency mocha to v10.2.0 ([#134](https://github.com/dimensionalpocket/development-js/issues/134)) ([294137f](https://github.com/dimensionalpocket/development-js/commit/294137fd4118b4eb5fc1f77432bdf3c6e53c3487))
+* **deps:** update dependency sinon to v14.0.1 ([#123](https://github.com/dimensionalpocket/development-js/issues/123)) ([ac46258](https://github.com/dimensionalpocket/development-js/commit/ac462580c05ef2eabf01527f87e6e14fa88055c0))
+* **deps:** update dependency sinon to v15 ([#135](https://github.com/dimensionalpocket/development-js/issues/135)) ([8e3df1f](https://github.com/dimensionalpocket/development-js/commit/8e3df1f2bf0cf3dbbcaf36d8b04384ec6215f23b))
+* **deps:** update google-github-actions/release-please-action action to v3.7.3 ([#138](https://github.com/dimensionalpocket/development-js/issues/138)) ([7e47753](https://github.com/dimensionalpocket/development-js/commit/7e477531ac78b8e4328ac99a97331dc7142d5afa))
+* GH Action changes should be fixes ([#142](https://github.com/dimensionalpocket/development-js/issues/142)) ([d94fe2f](https://github.com/dimensionalpocket/development-js/commit/d94fe2f90e60a6756d0d759757889eb29bf5114c))
+
 ## [1.0.2](https://github.com/dimensionalpocket/development-js/compare/v1.0.1...1.0.2) (2022-08-28)
 
 
