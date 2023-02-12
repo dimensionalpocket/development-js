@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.2.0](https://github.com/dimensionalpocket/development-js/compare/1.1.0...1.2.0) (2023-02-12)
+
+
+### Features
+
+* Node 18 testing in GH actions ([#145](https://github.com/dimensionalpocket/development-js/issues/145)) ([bceadf1](https://github.com/dimensionalpocket/development-js/commit/bceadf18536705c1ed0b26b5bc415c68865e75e8))
+
+
+### Bug Fixes
+
+* **deps:** update dependency @types/node to v18.13.0 ([#143](https://github.com/dimensionalpocket/development-js/issues/143)) ([1450550](https://github.com/dimensionalpocket/development-js/commit/145055036e414d3fe850b0916cb2558f9f2d9fb7))
+
 ## [1.1.0](https://github.com/dimensionalpocket/development-js/compare/1.0.2...1.1.0) (2023-02-04)
 
 
