@@ -10,7 +10,7 @@ on:
       node_matrix:
         description: 'A JSON string of an array of Node versions to run tests on'
         type: string
-        default: '["16.x", "17.x"]'
+        default: '["16.x", "17.x", "18.x"]'
 
       # Only upload coverage report for one of the Node versions in the matrix.
       # Must be present in the matrix. E.g., "17.x"
@@ -42,17 +42,11 @@ jobs:
       with:
         persist-credentials: ${{ env.HAVE_GITHUB_PAT != 'true' }}
 
-    - uses: actions/cache@v3
-      with:
-        path: ~/.npm
-        key: ${{ runner.os }}-node-${{ matrix.node-version }}-${{ hashFiles('**/package-lock.json') }}
-        restore-keys: |
-          ${{ runner.os }}-node-${{ matrix.node-version }}-
-
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
+        cache: 'npm'
 
     - name: Set Private Access Token (if present)
       run: git config --global url."https://${{secrets.GITHUB_PAT}}@github.com/".insteadOf ssh://git@github.com/
