@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.3.0](https://github.com/dimensionalpocket/development-js/compare/1.2.0...1.3.0) (2023-03-24)
+
+
+### Features
+
+* **Node workflow:** allow custom test/lint commands ([#151](https://github.com/dimensionalpocket/development-js/issues/151)) ([774f209](https://github.com/dimensionalpocket/development-js/commit/774f20911d0677f0c5e15f7db972f2435d0e7a5f))
+
+
+### Bug Fixes
+
+* **deps:** update babel monorepo to v7.21.3 ([#149](https://github.com/dimensionalpocket/development-js/issues/149)) ([f9aa292](https://github.com/dimensionalpocket/development-js/commit/f9aa2929df45f4affb18380d0009aeccbdc0e04a))
+* **deps:** update dependency @types/node to v18.15.5 ([#148](https://github.com/dimensionalpocket/development-js/issues/148)) ([1387df6](https://github.com/dimensionalpocket/development-js/commit/1387df68489c21bfeeb3e74eebf2c1161969c9a4))
+* **deps:** update dependency c8 to v7.13.0 ([#147](https://github.com/dimensionalpocket/development-js/issues/147)) ([4ea9ef5](https://github.com/dimensionalpocket/development-js/commit/4ea9ef50f72bd487f289067744749d9d6a377942))
+* **deps:** update google-github-actions/release-please-action action to v3.7.5 ([#146](https://github.com/dimensionalpocket/development-js/issues/146)) ([9cba72b](https://github.com/dimensionalpocket/development-js/commit/9cba72bab104e822e0b255fe39082b1902c71043))
+
 ## [1.2.0](https://github.com/dimensionalpocket/development-js/compare/1.1.0...1.2.0) (2023-02-12)
 
 
