@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Create/Update Release PR
-        uses: google-github-actions/release-please-action@v3.7.3
+        uses: google-github-actions/release-please-action@v3.7.5
         id: release-pr
         with:
           release-type: node
