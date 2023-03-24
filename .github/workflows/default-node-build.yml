@@ -20,6 +20,21 @@ on:
         description: 'The Node version to use when uploading the Coverage Report'
         type: string
 
+      node_lint_command:
+        description: 'The command to check for lint errors'
+        type: string
+        default: 'npx standardx --verbose'
+
+      node_test_command:
+        description: 'The command to run Node tests, without coverage'
+        type: string
+        default: 'npx mocha'
+
+      node_test_with_coverage_command:
+        description: 'The command to run Node tests, with coverage'
+        type: string
+        default: 'npx c8 mocha'
+
     secrets:
       GITHUB_PAT:
         description: 'A private access token to fetch private GitHub dependencies'
@@ -56,14 +71,14 @@ jobs:
       run: npm ci
 
     - name: Check for lint errors
-      run: npx standardx --verbose
+      run: ${{ inputs.node_lint_command }}
 
     - name: Run tests
-      run: npx mocha
+      run: ${{ inputs.node_test_command }}
       if: matrix.node-version != inputs.node_version_coverage
 
     - name: Run tests with coverage
-      run: npx c8 mocha
+      run: ${{ inputs.node_test_with_coverage_command }}
       if: matrix.node-version == inputs.node_version_coverage
 
     # - uses: romeovs/lcov-reporter-action@v0.3.1
