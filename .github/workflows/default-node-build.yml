@@ -53,7 +53,7 @@ jobs:
       HAVE_GITHUB_PAT: ${{ secrets.GITHUB_PAT != '' }}
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
       with:
         persist-credentials: ${{ env.HAVE_GITHUB_PAT != 'true' }}
 
